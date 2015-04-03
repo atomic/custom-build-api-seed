@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>TypeError: 'NoneType' object has no attribute '__getitem__' // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css" type="text/css">
+    <!-- We need to make sure this has a favicon so that the debugger does not by
+         accident trigger a request to /favicon.ico which might change the application
+         state. -->
+    <link rel="shortcut icon" href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script type="text/javascript" src="?__debugger__=yes&amp;cmd=resource&amp;f=jquery.js"></script>
+    <script type="text/javascript" src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script type="text/javascript">
+      var TRACEBACK = 139997022533072,
+          CONSOLE_MODE = false,
+          EVALEX = true,
+          SECRET = "0wzsVI2PYhmlTnDj3WDW";
+    </script>
+  </head>
+  <body>
+    <div class="debugger">
+<h1>TypeError</h1>
+<div class="detail">
+  <p class="errormsg">TypeError: 'NoneType' object has no attribute '__getitem__'</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  
+  <ul><li><div class="frame" id="frame-139997022533008">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1836</em>,
+      in <code class="function">__call__</code></h4>
+  <pre>return self.wsgi_app(environ, start_response)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533136">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1820</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <pre>response = self.make_response(self.handle_exception(e))</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533200">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1403</em>,
+      in <code class="function">handle_exception</code></h4>
+  <pre>reraise(exc_type, exc_value, tb)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533264">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1817</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <pre>response = self.full_dispatch_request()</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533328">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1477</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <pre>rv = self.handle_user_exception(e)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533392">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1381</em>,
+      in <code class="function">handle_user_exception</code></h4>
+  <pre>reraise(exc_type, exc_value, tb)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533456">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1475</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <pre>rv = self.dispatch_request()</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533520">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py"</cite>,
+      line <em class="line">1461</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <pre>return self.view_functions[rule.endpoint](**req.view_args)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533584">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/students/app/api.py"</cite>,
+      line <em class="line">52</em>,
+      in <code class="function">new_student</code></h4>
+  <pre>student.import_data(request.json)</pre>
+</div>
+
+<li><div class="frame" id="frame-139997022533648">
+  <h4>File <cite class="filename">"/home/carvantes/git/custom-build-api-seed/students/app/api.py"</cite>,
+      line <em class="line">34</em>,
+      in <code class="function">import_data</code></h4>
+  <pre>self.name = data['name']</pre>
+</div>
+</ul>
+  <blockquote>TypeError: 'NoneType' object has no attribute '__getitem__'</blockquote>
+</div>
+
+<div class="plain">
+  <form action="/?__debugger__=yes&amp;cmd=paste" method="post">
+    <p>
+      <input type="hidden" name="language" value="pytb">
+      This is the Copy/Paste friendly version of the traceback.  <span
+      class="pastemessage">You can also paste this traceback into
+      a <a href="https://gist.github.com/">gist</a>:
+      <input type="submit" value="create paste"></span>
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/carvantes/git/custom-build-api-seed/students/app/api.py", line 52, in new_student
+    student.import_data(request.json)
+  File "/home/carvantes/git/custom-build-api-seed/students/app/api.py", line 34, in import_data
+    self.name = data['name']
+TypeError: 'NoneType' object has no attribute '__getitem__'</textarea>
+  </form>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/carvantes/git/custom-build-api-seed/venv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/carvantes/git/custom-build-api-seed/students/app/api.py", line 52, in new_student
+    student.import_data(request.json)
+  File "/home/carvantes/git/custom-build-api-seed/students/app/api.py", line 34, in import_data
+    self.name = data['name']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+
+-->
