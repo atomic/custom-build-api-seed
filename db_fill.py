@@ -9,8 +9,6 @@ from app import db, models, views
 import json
 import os.path
 
-file = open('reddit_IamA.json')
-ListOfJson = json.load(file)
 
 # clear database
 RThread = models.RedditThread.query.all()
@@ -20,6 +18,8 @@ db.session.commit()
 
 # now fill the database
 # u = models.RedditThread(id = list_json[0][])
+file = open('reddit_IamA.json')
+ListOfJson = json.load(file)                    # alternatively, to extract directly from csv, see below
 for json_item in ListOfJson:
     db.session.add(models.RedditThread(
         # id(json_item['id']),
@@ -46,3 +46,9 @@ for json_item in ListOfJson:
         distinguished            =( json_item['distinguished'])))
 
 db.session.commit()
+
+#with open('IAmA.csv', 'rb') as f:
+    #reader = csv.reader(f)
+    #list = [ row for row in reader ]
+    #keys = list.pop(0)
+# the next values of list[n] are values row
