@@ -1,5 +1,6 @@
 # Virtual environment
 venv
+flask
 
 #pycharm auto generated files
 .idea
@@ -7,4 +8,8 @@ venv
 students/data.sqlite
 
 # ignore Rope
-*.ropeproject
+*.ropeproject*
+*.ropeproject/
+*.ropeproject/*
+*globalnames*
+*.pyc
