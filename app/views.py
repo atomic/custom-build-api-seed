@@ -32,6 +32,9 @@ def login():
                            form=form,
                            providers= app.config['OPENID_PROVIDERS'])
 
+@app.route('/faq', methods=['GET'])
+def faq():
+    return render_template("faq.html", title='Faq')
 
 @app.route('/iama/', methods=['GET'])
 def get_posts():

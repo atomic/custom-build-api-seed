@@ -1,0 +1,11 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Endpoints</h2>
+    <p> /              (GET) : main page, loads all 1000 post and render the list using jinja2 </p>
+    <p> /iama/         (GET) : get all 1000 post as json </p>
+    <p> /iama/<int:id> (GET) : get a post as json </p>
+
+{% endblock %}
