@@ -1,48 +1,59 @@
- <!--
- Free templates : http://www.quackit.com/html/templates/simple_website_templates.cfm
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-Design by Bryant Smith
-http://www.bryantsmith.com
-http://www.aszx.net
-email: templates [-at-] bryantsmith [-dot-] com
-Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
+    <link rel="stylesheet" href="../static/stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="../static/stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="../static/stylesheets/pygment_trac.css">
 
-Name       : A Farewell to Colors
-Description: One column, with top naviagation
-Version    : 1.0
-Released   : 20081230
--->
+    <script type="../static/text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="../static/text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="../static/text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="../static/text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/atomic/custom-build-api-seed">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Reddit Post History</h1>
+              <h2>{{ title }}</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="faq" class="zip"><em>Guide</em>FAQ</a><a href="https://github.com/atomic/custom-build-api-seed/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="../static/style.css" />
-<title>{{ title }}</title>
-</head>
+      <span class="banner-fix"></span>
 
-<body>
-    <div id="page">
-		
-        <div id="header">
-        	<h1> {{ title }}</h1>
-            <h2> Reddit parser </h2>
-            
-      </div>
-  <div id="bar">
-        	<div class="link"><a href="index">Home</a></div>
-            <div class="link"><a href="login">Login</a></div>
-            <div class="link"><a href="#">None</a></div>
-            <div class="link"><a href="#">None</a></div>
-            <div class="link"><a href="#">None</a></div>
-            <div class="link"><a href="#">faq</a></div>
-            <div class="link"><a href="#">contact</a></div>
-      </div>
-        <div class="contentText">
-          <p> Reddit parser that list all the thread history of a subreddit (IamA)</p>
-          <p>&nbsp;</p>
+
+      <section id="main_content">
+        <h3>
+            <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Reddit History for IamA 20013 !</h3>
+            <p> Check out FAQ page for the list of request endpoints</p>
+            <p> Reddit parser that list all the thread history of a subreddit (IamA)</p>
+            <p> </p>
+            <p> </p>
             <hr>
+
             {% with messages = get_flashed_messages() %}
               {% if messages %}
                 <ul>
@@ -52,14 +63,25 @@ Released   : 20081230
                 </ul>
               {% endif %}
             {% endwith %}
-            <hr>
             {% block content %}{% endblock %}
             {% block head %}{% endblock head %}
-            <br>
-            <br/>
-            <br/>
-        </div>
-</div>
-        <div id="footer"><a href="http://github.com/atomic">web development</a> by <a href="http://atomic.github.io">Tony Lim</a></div>
-</body>
+
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/atomic">atomic</a> can be found on <a href="https://github.com/atomic/costum-build-api-seed">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
 </html>

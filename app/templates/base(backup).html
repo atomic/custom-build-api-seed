@@ -1,0 +1,64 @@
+ <!--
+ Free templates : http://www.quackit.com/html/templates/simple_website_templates.cfm
+
+Design by Bryant Smith
+http://www.bryantsmith.com
+http://www.aszx.net
+email: templates [-at-] bryantsmith [-dot-] com
+Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
+
+Name       : A Farewell to Colors
+Description: One column, with top naviagation
+Version    : 1.0
+Released   : 20081230
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+<title>{{ title }}</title>
+</head>
+
+<body>
+    <div id="page">
+		
+        <div id="header">
+        	<h1> {{ title }}</h1>
+            <h2> Reddit parser </h2>
+            
+      </div>
+  <div id="bar">
+        	<div class="link"><a href="index">Home</a></div>
+            <div class="link"><a href="login">Login</a></div>
+            <div class="link"><a href="#">None</a></div>
+            <div class="link"><a href="#">None</a></div>
+            <div class="link"><a href="#">None</a></div>
+            <div class="link"><a href="#">faq</a></div>
+            <div class="link"><a href="#">contact</a></div>
+      </div>
+        <div class="contentText">
+          <p>&nbsp;</p>
+            <hr>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }} </li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+            <hr>
+            {% block content %}{% endblock %}
+            {% block head %}{% endblock head %}
+            <br>
+            <br/>
+            <br/>
+        </div>
+</div>
+        <div id="footer"><a href="http://github.com/atomic">web development</a> by <a href="http://atomic.github.io">Tony Lim</a></div>
+</body>
+</html>

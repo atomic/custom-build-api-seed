@@ -15,7 +15,7 @@ def index():
     # By here, all posts should already loaded to database
     mydatabase = models.RedditThread.query.all()
     return render_template("index.html",
-                           title='Home',
+                           title='Index',
                            posts=mydatabase)
 
 

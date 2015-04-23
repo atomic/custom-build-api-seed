@@ -1,11 +1,23 @@
 <!-- extend from base layout -->
 {% extends "base.html" %}
+<style type="text/css">
+body {
+    font-family: arial;
+    background-color: rgb(185,179,175);}
+h1 {
+    color: rgb(255,255,255);}
+p.one {
+    border-width: 2px;}
+p.two {
+    border-width: thick;}
+p.three {
+    border-width: 1px 4px 12px 4px;}
+</style>
 {% block title %} {{ title }} {% endblock title %}
 {% block content %}
     {% for post in posts %}
     <div>
-        <h3 align="center" margin-top="20px">{{ post.author }} </h3>
-        <hr>
+        <h3>{{ post.author }} </h3>
         <table border="1" cellspacing="5" cellpadding="5">
             <tr><th></th><th scope="col">Upvotes</th><th scope="col">Downvotes</th><th scope="col">Comments</th><th scope="col">Score</th></tr>
             <tr><th scope="row">Number</th>
