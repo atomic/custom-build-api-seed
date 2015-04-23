@@ -36,6 +36,14 @@ def login():
 def faq():
     return render_template("faq.html", title='Faq')
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html', title='Page not found.'), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html', title='Internal Server Error 500.'), 500
+
 @app.route('/iama/', methods=['GET'])
 def get_posts():
     return jsonify({'posts': [post.get_url() for post in models.RedditThread.query.all()]})
@@ -66,3 +74,4 @@ def edit_post(id):
 @app.route('/healthcheck', methods=['GET'])
 def healthCheck():
     return jsonify()
+
