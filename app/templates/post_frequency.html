@@ -1,0 +1,42 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock title %}
+{% block content %}
+<ol>
+    <h3 align="left" margin-top="-50px"> Most frequent post by Author </h3>
+    <hr>
+    <table border="1" cellspacing="5" cellpadding="5">
+        <div>
+            <tr>
+                <th scope="col">Author</th>
+                <th scope="col">Number of Posts</th>
+            </tr>
+    {% for pair in  author_posts[:10] %}
+            <tr>
+                <td align="right">{{ pair[0] }}</td>
+                <td align="left">{{ pair[1] }}</td>
+            </tr>
+    {% endfor %}
+        </div>
+    </table>
+    <hr>
+    <h3 align="left" margin-top="-50px"> Least frequent post by Author </h3>
+    <hr>
+    <table border="1" cellspacing="5" cellpadding="5">
+        <div>
+            <tr>
+                <th scope="col">Author</th>
+                <th scope="col">Number of Posts</th>
+            </tr>
+            {% for pair in  author_posts[-10::] %}
+            <tr>
+                <td align="right">{{ pair[0] }}</td>
+                <td align="left">{{ pair[1] }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+    </table>
+</ol>
+{% endblock %}
+{% block head %}
+{% endblock head %}

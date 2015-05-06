@@ -3,9 +3,27 @@
 
 {% block content %}
 
-    <h2>Endpoints</h2>
-    <p> /              (GET) : main page, loads all 1000 post and render the list using jinja2 </p>
-    <p> /iama/         (GET) : get all 1000 post as json </p>
-    <p> /iama/<int:id> (GET) : get a post as json </p>
+<div class="container">
+    <h1><small>Get All Records</small></h1>
+
+        <h1>GET (all 1000 post as json)</h1>
+        <div class="row">
+            <div class="input-group">
+                <input type="text" class="form-control" value="http://127.0.0.1:5000/api/">
+            </div>
+        </div>
+        <div class="row">
+            <h1><small>Get only 1 Record</small></h1>
+            <div class="input-group">
+                <input type="text" class="form-control" value="http://127.0.0.1:5000/api/1">
+            </div>
+        </div>
+        <div class="row">
+            <h1><small>Add New Record(JSON)</small></h1>
+            <div class="input-group">
+                <input type="text" class="form-control" value="http://127.0.0.1:5000/api/ID">
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
